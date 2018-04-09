@@ -42,7 +42,6 @@
             // 
             // mainScreen1
             // 
-            this.mainScreen1.credits = 200;
             this.mainScreen1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainScreen1.Location = new System.Drawing.Point(0, 0);
             this.mainScreen1.losses = 0;

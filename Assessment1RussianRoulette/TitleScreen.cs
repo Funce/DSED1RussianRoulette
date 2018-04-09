@@ -12,13 +12,11 @@ namespace Assessment1RussianRoulette
 {
     public partial class TitleScreen : UserControl
     {
+        /// <summary>
+        /// TitleScreen handles all input and output via the parent form's FormHandler
+        /// Make sure to also include a MainScreen
+        /// </summary>
         private Form1 ParentForm1;
-
-        public int credits
-        {
-            get { return Convert.ToInt16(lblCredits.Text); }
-            set { lblCredits.Text = value.ToString(); }
-        }
 
         public TitleScreen()
         {
@@ -33,7 +31,7 @@ namespace Assessment1RussianRoulette
         //Event Handling will contain a bunch of variables.
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            ParentForm1.MainHandler.Begin();
+            ParentForm1.MainHandler.Begin(Convert.ToInt16(txtChambers.Text), Convert.ToInt16(txtBullets.Text));
         }
     }
 }

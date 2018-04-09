@@ -36,12 +36,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblWins = new System.Windows.Forms.Label();
             this.lblLosses = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblCredits = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPull
             // 
+            this.btnPull.Enabled = false;
             this.btnPull.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPull.Location = new System.Drawing.Point(165, 207);
             this.btnPull.Name = "btnPull";
@@ -49,9 +48,11 @@
             this.btnPull.TabIndex = 0;
             this.btnPull.Text = "Pull";
             this.btnPull.UseVisualStyleBackColor = true;
+            this.btnPull.Click += new System.EventHandler(this.btnPull_Click);
             // 
             // btnPass
             // 
+            this.btnPass.Enabled = false;
             this.btnPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPass.Location = new System.Drawing.Point(241, 207);
             this.btnPass.Name = "btnPass";
@@ -59,13 +60,14 @@
             this.btnPass.TabIndex = 1;
             this.btnPass.Text = "Pass";
             this.btnPass.UseVisualStyleBackColor = true;
+            this.btnPass.Click += new System.EventHandler(this.btnPass_Click);
             // 
             // lbxLog
             // 
             this.lbxLog.FormattingEnabled = true;
-            this.lbxLog.Location = new System.Drawing.Point(11, 10);
+            this.lbxLog.Location = new System.Drawing.Point(12, 39);
             this.lbxLog.Name = "lbxLog";
-            this.lbxLog.Size = new System.Drawing.Size(127, 238);
+            this.lbxLog.Size = new System.Drawing.Size(294, 160);
             this.lbxLog.TabIndex = 2;
             // 
             // btnBack
@@ -81,7 +83,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(211, 142);
+            this.label1.Location = new System.Drawing.Point(34, 214);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 4;
@@ -90,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(204, 159);
+            this.label2.Location = new System.Drawing.Point(27, 240);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 5;
@@ -99,7 +101,7 @@
             // lblWins
             // 
             this.lblWins.AutoSize = true;
-            this.lblWins.Location = new System.Drawing.Point(246, 142);
+            this.lblWins.Location = new System.Drawing.Point(76, 214);
             this.lblWins.Name = "lblWins";
             this.lblWins.Size = new System.Drawing.Size(13, 13);
             this.lblWins.TabIndex = 6;
@@ -108,36 +110,16 @@
             // lblLosses
             // 
             this.lblLosses.AutoSize = true;
-            this.lblLosses.Location = new System.Drawing.Point(246, 159);
+            this.lblLosses.Location = new System.Drawing.Point(76, 240);
             this.lblLosses.Name = "lblLosses";
             this.lblLosses.Size = new System.Drawing.Size(13, 13);
             this.lblLosses.TabIndex = 7;
             this.lblLosses.Text = "0";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(239, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Credits:";
-            // 
-            // lblCredits
-            // 
-            this.lblCredits.AutoSize = true;
-            this.lblCredits.Location = new System.Drawing.Point(281, 10);
-            this.lblCredits.Name = "lblCredits";
-            this.lblCredits.Size = new System.Drawing.Size(25, 13);
-            this.lblCredits.TabIndex = 9;
-            this.lblCredits.Text = "200";
-            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lblCredits);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblLosses);
             this.Controls.Add(this.lblWins);
             this.Controls.Add(this.label2);
@@ -163,7 +145,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblWins;
         private System.Windows.Forms.Label lblLosses;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblCredits;
     }
 }
